@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolyo site ödevi </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="ozelImlec"></div>
+
+    <nav>
+        <div class="logo">Portfolyo.io</div>
+        <ul class="nav-menusu">
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+        <button id="temaDegistirici">Mod Değiştir</button>
+    </nav>
+
+    <header id="hakkimda">
+        <div class="profil-alani">
+            <img src="https://picsum.photos/200" alt="Profesyonel Fotoğraf" class="profil-resmi">
+            <h1 id="daktiloMetni"></h1>
+            <p class="biyografi">
+                teknoloji dünyasın çıkan yenilikleri öğrenmek isteyen bir öğrenciyim 
+                Modern web teknolojileri ile kullanıcı dostu programları ne kadar ilgi çekiçi olduğu zaten herkesçe 
+                bilinir elimden geldikçe bir şeyler yapmak ve kapasitem yettikçe öğrenmek istiyorum 
+            </p>
+        </div>
+    </header>
+
+    <section id="egitim">
+        <h2>Eğitim ve Beceriler</h2>
+        <div class="egitim-kartlari">
+            <div class="kart">
+                <h3>Eğitim</h3>
+                <p>Bilgisayar programcılıgı | 2025 - 2026</p>
+                <p><strong>Dersler:</strong> görsel programlama, internet programcılığı , Veritabanı Yönetimi</p>
+            </div>
+            <div class="kart">
+                <h3>Yetenekler</h3>
+                <div class="yetenek-grubu">
+                    <span>JavaScript</span>
+                    <div class="cubuk-arkaplan"><div class="cubuk-doluluk" style="width: 25%;"></div></div>
+                </div>
+                <div class="yetenek-grubu">
+                    <span>HTML5 & CSS3</span>
+                    <div class="cubuk-arkaplan"><div class="cubuk-doluluk" style="width: 30%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeler">
+        <h2>Projelerim</h2>
+        <div class="filtre-butonlari">
+            <button onclick="projeFiltrele('Hepsi')">Hepsi</button>
+            <button onclick="projeFiltrele('Web')">Web</button>
+            <button onclick="projeFiltrele('Mobil')">Mobil</button>
+        </div>
+        <div id="projeListesi" class="proje-galerisi">
+            </div>
+    </section>
+
+    <footer id="iletisim">
+        <h2>Bana Ulaşın</h2>
+        <div class="iletisim-bilgileri">
+            <p>📧 E-posta: <a href="">merhaba@ornek.com</a></p>
+            <p>🐙 GitHub: <a href="https://github.com/kullaniciadi" target="_blank">github.com/kullaniciadi</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
