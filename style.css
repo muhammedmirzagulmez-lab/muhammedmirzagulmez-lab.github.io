@@ -1,0 +1,77 @@
+:root {
+    --ana-arkaplan: #ffffff;
+    --metin-rengi: #1a1a1a;
+    --vurgu-rengi: #007bff;
+    --kart-rengi: #f8f9fa;
+}
+
+[data-tema="dark"] {
+    --ana-arkaplan: #121212;
+    --metin-rengi: #f5f5f5;
+    --vurgu-rengi: #00d4ff;
+    --kart-rengi: #1e1e1e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--ana-arkaplan);
+    color: var(--metin-rengi);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s ease;
+    cursor: none; /* Özel imleç için */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--kart-rengi);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menusu { display: flex; list-style: none; gap: 20px; }
+.nav-menusu a { text-decoration: none; color: var(--metin-rengi); font-weight: bold; }
+
+
+header { padding: 80px 5%; text-align: center; }
+.profil-resmi { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--vurgu-rengi); margin-bottom: 20px; }
+
+.proje-galerisi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+}
+
+.proje-kart {
+    background: var(--kart-rengi);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid var(--vurgu-rengi);
+    transition: transform 0.3s;
+}
+
+.proje-kart:hover { transform: translateY(-10px); }
+
+
+.cubuk-arkaplan { background: #cbc4c4; height: 10px; border-radius: 5px; margin-top: 5px; }
+.cubuk-doluluk { background: var(--vurgu-rengi); height: 100%; border-radius: 5px; }
+
+
+#ozelImlec {
+    width: 20px; height: 20px; border: 2px solid var(--vurgu-rengi);
+    border-radius: 50%; position: fixed; pointer-events: none;
+    transform: translate(-50%, -50%); z-index: 9999; transition: transform 0.1s ease;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .nav-menusu { display: none; } 
+    header { padding: 40px 5%; }
+}
